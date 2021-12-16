@@ -1,0 +1,13 @@
+version: "3"
+services:
+  # this container will run Cypress test using built-in Chrome browser
+  chrome:
+    image: "cypress-docker"
+    command: "test"
+    volumes:
+      - ./cypress/videos:/cypress-docker/cypress/videos
+      - ./cypress/reports:/cypress-docker/cypress/reports
+  
+  # we can add another container if we want to do cross browser testing
+  
+

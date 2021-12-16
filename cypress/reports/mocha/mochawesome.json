@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-16T15:47:08.404Z",
+    "end": "2021-12-16T15:47:33.548Z",
+    "duration": 25144,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "398d752d-d132-4233-9e53-16160902bd08",
+      "title": "",
+      "fullFile": "cypress/integration/medium.js",
+      "file": "cypress/integration/medium.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db474945-622d-4bc6-95b8-48f8f2052f01",
+          "title": "visit medium website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get the title - Pass",
+              "fullTitle": "visit medium website get the title - Pass",
+              "timedOut": null,
+              "duration": 11418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://medium.com/@lavanyashankarsv09\");\ncy.title().should('eq', 'Lavanya S – Medium');",
+              "err": {},
+              "uuid": "b6f1a6aa-6337-4114-8b0f-a1afa90fe58c",
+              "parentUUID": "db474945-622d-4bc6-95b8-48f8f2052f01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "get the title - Fail",
+              "fullTitle": "visit medium website get the title - Fail",
+              "timedOut": null,
+              "duration": 9010,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://medium.com/@lavanyashankarsv09\");\ncy.title().should('eq', 'Medium');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Lavanya S – Medium' to equal 'Medium'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Lavanya S – Medium' to equal 'Medium'\n    at Context.eval (https://medium.com/__cypress/tests?p=cypress\\integration\\medium.js:107:16)",
+                "diff": "- 'Lavanya S – Medium'\n+ 'Medium'\n"
+              },
+              "uuid": "b9680ee2-cfd1-4c7c-9c89-bbf46f49f38c",
+              "parentUUID": "db474945-622d-4bc6-95b8-48f8f2052f01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b6f1a6aa-6337-4114-8b0f-a1afa90fe58c"
+          ],
+          "failures": [
+            "b9680ee2-cfd1-4c7c-9c89-bbf46f49f38c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20428,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

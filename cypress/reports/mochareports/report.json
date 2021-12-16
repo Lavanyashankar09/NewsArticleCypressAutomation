@@ -1,0 +1,193 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-12-16T15:47:08.404Z",
+    "end": "2021-12-16T15:48:52.295Z",
+    "duration": 81480,
+    "testsRegistered": 3,
+    "passPercent": 33.333333333333336,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "42590aee-bde6-433f-ad54-a0593144d40f",
+      "title": "",
+      "fullFile": "cypress/integration/news_article.js",
+      "file": "cypress/integration/news_article.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "64029a26-1145-4275-b193-c4e89807c797",
+          "title": "get headlines from new yorker",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get headlines from new yorker",
+              "fullTitle": "get headlines from new yorker get headlines from new yorker",
+              "timedOut": null,
+              "duration": 61052,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const headLineArray = [];\ncy.visit(\"https://www.newyorker.com/\");\ncy.wait(10000);\ncy.title().should('eq', 'The New Yorker').wait(20000);\ncy.xpath('//h2[@class=\"summary-item__hed\"]').each(($el, index) => {\n  cy.writeFile('news_article.txt', $el.text(), {\n    flag: 'a+'\n  });\n  cy.writeFile('news_article.txt', '\\n', {\n    flag: 'a+'\n  });\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.newyorker.com/__cypress/runner/cypress_runner.js:157134:72)\n    at https://www.newyorker.com/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (https://www.newyorker.com/__cypress/runner/cypress_runner.js:13196:23)\n    at https://www.newyorker.com/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (https://www.newyorker.com/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (https://www.newyorker.com/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (https://www.newyorker.com/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (https://www.newyorker.com/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (https://www.newyorker.com/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (https://www.newyorker.com/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (https://www.newyorker.com/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.newyorker.com/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (https://www.newyorker.com/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.newyorker.com/__cypress/tests?p=cypress\\integration\\news_article.js:106:8)",
+                "diff": null
+              },
+              "uuid": "94cb7dac-55c9-4dcf-8800-3737627a2d61",
+              "parentUUID": "64029a26-1145-4275-b193-c4e89807c797",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "94cb7dac-55c9-4dcf-8800-3737627a2d61"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61052,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "398d752d-d132-4233-9e53-16160902bd08",
+      "title": "",
+      "fullFile": "cypress/integration/medium.js",
+      "file": "cypress/integration/medium.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db474945-622d-4bc6-95b8-48f8f2052f01",
+          "title": "visit medium website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "get the title - Pass",
+              "fullTitle": "visit medium website get the title - Pass",
+              "timedOut": null,
+              "duration": 11418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://medium.com/@lavanyashankarsv09\");\ncy.title().should('eq', 'Lavanya S – Medium');",
+              "err": {},
+              "uuid": "b6f1a6aa-6337-4114-8b0f-a1afa90fe58c",
+              "parentUUID": "db474945-622d-4bc6-95b8-48f8f2052f01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "get the title - Fail",
+              "fullTitle": "visit medium website get the title - Fail",
+              "timedOut": null,
+              "duration": 9010,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://medium.com/@lavanyashankarsv09\");\ncy.title().should('eq', 'Medium');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Lavanya S – Medium' to equal 'Medium'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Lavanya S – Medium' to equal 'Medium'\n    at Context.eval (https://medium.com/__cypress/tests?p=cypress\\integration\\medium.js:107:16)",
+                "diff": "- 'Lavanya S – Medium'\n+ 'Medium'\n"
+              },
+              "uuid": "b9680ee2-cfd1-4c7c-9c89-bbf46f49f38c",
+              "parentUUID": "db474945-622d-4bc6-95b8-48f8f2052f01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b6f1a6aa-6337-4114-8b0f-a1afa90fe58c"
+          ],
+          "failures": [
+            "b9680ee2-cfd1-4c7c-9c89-bbf46f49f38c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20428,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

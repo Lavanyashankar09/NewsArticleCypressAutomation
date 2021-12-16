@@ -24,10 +24,11 @@ To execute with docker:
 1. Any OS which as docker & docker-compose
 2. clone the repo "NewsArticleCypressAutomation"
 3. goto the folder NewsArticleCypressAutomation
-4. Run this command 
+4. goto package.json file and replace 7th line with this "clean-reports": "mkdir -p cypress/reports && rm -R -f cypress/reports/* && mkdir cypress/reports/mochareports",
+5. Run this command 
 	docker build -t cypress-docker . { here "." is current file location}
 5. To execute testcases run this command
-	docker-compose run e2e-chrome
+	docker-compose run chrome
 
 Challenges:
 1. Difficulty in locating elements 

@@ -1,8 +1,8 @@
 # NewsArticleCypressAutomation
 
-Built with Cypress framework
+Built with javascript, cypress, mochawesome.
 
-Tools - Visual Studio, nodejs
+Tools: Visual Studio, Node.js.
 
 AIM - to fetch articles from this website https://www.newyorker.com/latest
 

@@ -27,8 +27,22 @@ To execute with docker:
 4. goto package.json file and replace 7th line with this "clean-reports": "mkdir -p cypress/reports && rm -R -f cypress/reports/* && mkdir cypress/reports/mochareports",
 5. Run this command 
 	docker build -t cypress-docker . { here "." is current file location}
-5. To execute testcases run this command
+6. To execute testcases run this command
 	docker-compose run chrome
+	
+To execute in ubuntu:
+1. install npm and cypress dependencies
+   apt install npm
+   apt-get install xvfb
+2. clone the repo "NewsArticleCypressAutomation"
+3. goto the folder NewsArticleCypressAutomation
+4. Run the commands given below to install dependencies from package.json file
+	npm install
+5. To execute testcases run this command 
+	npm test 
+	
+To execute in rhel:
+1. https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-nodejs-ubuntu-debian-linux-mint-using-ppa.html
 
 Challenges:
 1. Difficulty in locating elements 
